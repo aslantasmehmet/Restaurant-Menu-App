@@ -1,19 +1,28 @@
-import React, { useEffect, useState } from "react";
-import categoryData from '../api/data'
+import React, {useState} from "react";
 
-export default function Categories() {
+export default function Categories({ categories, filterItems  }) {
 
-    const [categories, setCategories] = useState([])
-   
-    useEffect(() => {
-      setCategories(categoryData)
-    }, [])
-    
-  return (
-    <div>
-      <div className="flex flex-row translate-y-40 justify-center">
-        <div className="mr-7 text-white font-semibold text-lg">All</div>
-      </div>
-    </div>
-  );
+  const [activeCategory, setActiveCategory] = useState();
+
+return (
+    <div className="flex flex-row  justify-center">
+    {categories.map((category, index) => {
+      const isActive = activeCategory === category;
+      return (
+        <div>
+          <button 
+            style={{ borderBottom: isActive ? '2px solid black' : 'none' }}
+            type="button"
+            key={index}
+            onClick ={() => { filterItems(category); setActiveCategory(category);}}
+           className={`text-white font-semibold mx-6 ${isActive ? 'animate-underline':''}`}
+            
+            >
+            {category.toUpperCase()}
+          </button>
+        </div>
+      );
+    })}
+  </div>
+);
 }

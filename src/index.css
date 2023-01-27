@@ -2,6 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
+.animate-underline {
+  border-bottom: 2px solid black;
+  animation: animate-underline 0.3s ease-in-out;
+}
+
+@keyframes animate-underline {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.flex {
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  button {
+      margin: 8px 0;
+  }
+}
+
+/* menü responsive */
+
+@media (max-width: 768px) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .w-48 {
+      width: 80%;
+  }
+  .h-40 {
+      height: 150px;
+  }
+  .gap-4 {
+      gap: 8px;
+  }
+  .underline {
+    flex: 1;
+  }
+  .ml-4 {
+      margin-left: 0;
+  }
+}
+
+
+
 
 
 body {
