@@ -9,10 +9,7 @@ export default function Menu({ items }) {
           return (
             <div className="flex flex-row justify-center my-6 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300">
               <div className="border-2 border-x-amber-900 md:w-48 md:h-40 w-48 h-48 shadow-lg">
-                <img
-                  className="w-full h-full"
-                  src="https://raw.githubusercontent.com/ececmk/menu-with-react/master/public/images/item-1.jpeg"
-                />
+                <img className="w-full h-full" src={img} alt={title} />
               </div>
               <div className="flex flex-col">
                 <div className="grid gap-4 grid-cols-2 ml-4 mb-8 mt-4 md:mt-0">
@@ -21,7 +18,7 @@ export default function Menu({ items }) {
                       title.slice(1).toLowerCase()}
                   </div>
                   <div className=" underline font-semibold  text-black flex justify-end">
-                    {price} ₺
+                    {price} $
                   </div>
                 </div>
                 <div className="w-80 text-left ml-4 font-sans text-white font-semibold">
