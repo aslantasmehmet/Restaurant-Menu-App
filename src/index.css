@@ -7,6 +7,8 @@
   animation: animate-underline 0.3s ease-in-out;
 }
 
+/* Categories Responsive Desing */
+
 @keyframes animate-underline {
   from {
     width: 0;
@@ -26,7 +28,7 @@
   }
 }
 
-/* menü responsive */
+/* Menü responsive */
 
 @media (max-width: 768px) {
   .grid {
