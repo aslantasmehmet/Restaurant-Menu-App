@@ -8,7 +8,7 @@ export default function Menu({ items }) {
           const { id, title, img, desc, price } = menuItem;
           return (
             <div className="flex flex-row justify-center my-6 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300">
-              <div className="border-2 border-x-amber-900 md:w-48 md:h-40 w-48 h-48 shadow-lg">
+              <div className="border-2 bg-white border-x-amber-900 md:w-48 md:h-40 w-48 h-48 shadow-lg">
                 <img className="w-full h-full" src={img} alt={title} />
               </div>
               <div className="flex flex-col">
@@ -18,10 +18,10 @@ export default function Menu({ items }) {
                       title.slice(1).toLowerCase()}
                   </div>
                   <div className=" underline font-semibold  text-black flex justify-end">
-                    {price} $
+                    {price} ₺
                   </div>
                 </div>
-                <div className="w-80 text-left ml-4 font-sans text-white font-semibold">
+                <div className="w-96 text-left ml-4 -translate-y-3 font-sans text-white font-semibold">
                   {desc}
                 </div>
               </div>
